@@ -1,8 +1,8 @@
 from coalas import csvReader as c
 
-c.importCSV('food-time.csv')
-
+c.importCSV('population.csv')
+c.addCol('NormalizedPop')
 for i in range(len(c.Year)): 
-    c.YearSince[i] = int(c.Year[i])-1960
+    c.NormalizedPop.append(float(c.Population[i])-946764816)
 
-c.writeCSV('food-time.csv')
+c.writeCSV('population.csv')
