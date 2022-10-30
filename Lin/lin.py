@@ -2,14 +2,14 @@ import math
 from coalas import csvReader as c
 
 c.importCSV('population.csv')
+c.addCol('Year')
 c.addCol('log')
-#for i in range(len(Pop)):
-#    temp = (math.log(126562371.0)+(i-1)*math.log(t)
-#    print(temp)
+c.addCol('pred')
 for i in range(len(c.Pop)):
-    # c.log.append(math.log(4184537.2)-(math.log(float(c.Pop[i]))/(i-1)-math.log(2)))
-    print((math.log(float(c.Pop[i]))-10))
-    c.log.append((math.log(float(c.Pop[i]))-10))
-
+    print((math.log10(float(c.Pop[i]))))
+    c.Year.append(i)
+    c.log.append((math.log10(float(c.Pop[i]))))
+    c.pred.append((i-1)*math.log10(2)+math.log10(126562371))
 c.writeCSV('lin.csv')
+
 
