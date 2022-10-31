@@ -10,6 +10,7 @@ for i in range(len(c.Pop)):
     c.Year.append(i)
     c.log.append((math.log10(float(c.Pop[i]))))
     c.pred.append((i-1)*math.log10(2)+math.log10(126562371))
+
 c.writeCSV('lin.csv')
 
 
