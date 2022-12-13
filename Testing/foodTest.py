@@ -13,3 +13,4 @@ test_list2 = ([int(x) for x in c.Predicted])
 
 print(len(set(test_list1) & set(test_list2)) / float(len(set(test_list1) | set(test_list2))) * 100)
 
+
